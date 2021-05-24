@@ -5,31 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
+    
     {% include "snippets/styles.html" %}
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+      {% block app_css %}
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">    
+      {% endblock app_css %}
+    <link rel="shortcut icon" href="  {% static 'img/byCode_fav.png' %} " type="image/x-icon">  
+    <title>{{title}}</title>
+
 </head>
 <body>
     {% include "snippets/navbar.html" %}
     <div class="jumbotron jumbotron-fluid">
         <div class="container text-white text-center">
-         {% block header %}
-         
-         {% endblock header %}
+         {% block header %}{% endblock header %}
         </div>
-        
     </div>
     <div class="container-fluid">
         <div  class="container bg-light  text-dark " style="margin-top:-100px" >
-          <div class="row" style="height: 400px;">
-            <h1>CONTENT1</h1>
-          </div>
+          {% block content1 %}{% endblock content1 %} 
         </div>
         <div class="container bg-dark text-white shadow" >
-          <div  class='row' style="height:300px">
-              <h1>CONTENT2</h1>
-          </div>
+          {% block content2 %}{% endblock content2 %}
         </div>
     </div>   
     {% include "snippets/script.html" %}
