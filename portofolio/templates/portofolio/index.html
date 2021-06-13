@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block app_css %}
+    <link rel="stylesheet" href="{% static 'portofolio/css/styles.css' %}">
+{% endblock app_css %}
+
+{% block header %}
+    <h1 style="margin-top:150px;">{{heading}} </h1>
+    <p  >{{subheading}}</p>
+{% endblock header %}

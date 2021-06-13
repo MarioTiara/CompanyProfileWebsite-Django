@@ -1,34 +1,153 @@
 {% load static %}
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <!--include external lib-->
     {% include "snippets/styles.html" %}
+    <!-- internal app css-->
       {% block app_css %}
         <link rel="stylesheet" href="{% static 'css/styles.css' %}">    
       {% endblock app_css %}
-    <link rel="shortcut icon" href="  {% static 'img/byCode_fav.png' %} " type="image/x-icon">  
-    <title>{{title}}</title>
+    <!--favIcon setting-->
+    <link rel="shortcut icon" href="  {% static 'img/byCode_fav.png' %} " type="image/x-icon">
+    <!--- title-->  
+    <title>byCode.id:{{title}}</title>
 
 </head>
 <body>
-    {% include "snippets/navbar.html" %}
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container text-white text-center">
-         {% block header %}{% endblock header %}
-        </div>
+
+  <!--navbar-->
+  {% include "snippets/navbar.html" %}
+  <!--navbar End-->
+  
+  <!--jumbotron-->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">{{heading}}</h1>
+      <p class="lead">{{subheading}}</p>
     </div>
-    <div class="container-fluid">
-        <div  class="container bg-light  text-dark " style="margin-top:-100px" >
-          {% block content1 %}{% endblock content1 %} 
-        </div>
-        <div class="container bg-dark text-white shadow" >
-          {% block content2 %}{% endblock content2 %}
-        </div>
-    </div>   
+  </div>
+   
+  <!-- End jumbotron-->
+
+  <!--Services -->
+  <section class="services" id="services">
+    <div class="container-heading">
+      <h1 class="heading">OUR SERVICES</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis explicabo odio aspernatur veniam accusamus modi aliquam, porro aperiam illo fugit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptates aut expedita laboriosam molestiae consequuntur facere obcaecati velit alias temporibus.</p>
+    </div>
+    <div class="container-box">
+      <div class="overlay">
+          <div class="main-content">
+              <img src="/static/img/Web.jpg" alt="">
+          </div>
+          <div class="overlay-content">
+              <h2>Web Development</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, facilis. Perspiciatis saepe minus enim dignissimos et. Minima quia iste ex.</p>
+              <a class="mybtn btn " href="#">MORE</a>
+          </div>        
+      </div>
+      <div class="overlay">
+          <div class="main-content">
+              <img src="/static/img/AI.jpg" alt="">
+          </div>
+          <div class="overlay-content">
+              <h2>AI Development</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, facilis. Perspiciatis saepe minus enim dignissimos et. Minima quia iste ex.</p>
+              <a class="mybtn btn " href="#">MORE</a>
+          </div>        
+      </div>
+      <div class="overlay">
+          <div class="main-content">
+              <img src="/static/img/Desktop.jpg" alt="">
+          </div>
+          <div class="overlay-content">
+              <h2>Desktop Solutions</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, facilis. Perspiciatis saepe minus enim dignissimos et. Minima quia iste ex.</p>
+              <a class="mybtn btn " href="#">MORE</a>
+          </div>        
+      </div>
+      <div class="overlay">
+          <div class="main-content">
+              <img src="/static/img/multimedia.jpg" alt="">
+          </div>
+          <div class="overlay-content">
+              <h2>Multimedia Consultant</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, facilis. Perspiciatis saepe minus enim dignissimos et. Minima quia iste ex.</p>
+              <a class="mybtn btn " href="#">MORE</a>
+          </div>        
+      </div>
+      <div class="overlay">
+          <div class="main-content">
+              <img src="/static/img/electro.jpg" alt="">
+          </div>
+          <div class="overlay-content">
+              <h2>Digital Electronic and IoT Solutions</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, facilis. Perspiciatis saepe minus enim dignissimos et. Minima quia iste ex.</p>
+              <a class="mybtn btn " href="#">MORE</a>
+          </div>        
+      </div>
+      <div class="overlay">
+          <div class="main-content">
+              <img src="/static/img/Research.jpg" alt="">
+          </div>
+          <div class="overlay-content">
+              <h2>Research Consultant</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, facilis. Perspiciatis saepe minus enim dignissimos et. Minima quia iste ex.</p>
+              <a class="mybtn btn " href="#">MORE</a>
+          </div>        
+      </div>
+    </div>
+  </section>
+  <!--End Services-->
+
+  <!--Product-->
+  <section class="Product">
+    <div class="container-Heading">
+      <h1>OUR MAIN PRODUCTS</h1>
+    </div>
+    <div class="row product1">
+        <div class="col-lg-6 image">
+          <img src="/static/img/Company_profile.jpg" alt="" class="img-fluid" >
+        </div> 
+        <div class="col-lg-5 text">
+          <h2>Web Company</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aspernatur ullam reprehenderit unde mollitia numquam.</p>
+          <a href="" class="btn btn-primary">MORE</a>
+        </div>     
+    </div>
+        <div class="row product2">
+        <div class="col-lg-6 image">
+          <img src="/static/img/face_recog.jpg" alt="" class="img-fluid" >
+        </div> 
+        <div class="col-lg-5 text">
+          <h2>Face Recognition</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aspernatur ullam reprehenderit unde mollitia numquam.</p>
+          <a href="" class="btn btn-primary">MORE</a>
+        </div>     
+    </div>
+    </div>
+        <div class="row product3">
+        <div class="col-lg-6 image">
+          <img src="/static/img/Mobile_robotic.gif" alt="" class="img-fluid" >
+        </div> 
+        <div class="col-lg-5 text">
+          <h2>Autonomous Mobile Robot</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aspernatur ullam reprehenderit unde mollitia numquam.</p>
+          <a href="" class="btn btn-primary">MORE</a>
+        </div>     
+    </div>
+  </section>
+
+
+  <!--End Product-->
+
+
+  <!--includ script-->
     {% include "snippets/script.html" %}
+  <!--end includ script-->   
+    
 </body>
 </html>

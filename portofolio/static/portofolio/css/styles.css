@@ -1,0 +1,7 @@
+.jumbotron{
+    
+    background: linear-gradient(rgba(44, 58, 71,0.9),rgba(44, 58, 71,0.6)), url('/static/portofolio/img/portofolio.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
